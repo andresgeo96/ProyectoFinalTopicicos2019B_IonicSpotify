@@ -30,4 +30,4 @@ Probamos la funcionalidad de nuestra aplicación
 
 LINK DEL VIDEO TUTORIAL 
 
-https://www.youtube.com/watch?v=wpudfz3z0mo
+https://youtu.be/yCDtUf-v0Fk
