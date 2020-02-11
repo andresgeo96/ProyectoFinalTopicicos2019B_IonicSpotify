@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Spotify 
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button clear (click)="authWithSpotify()" *ngIf="!loggedIn">Login</button>
+      <button ion-button clear (click)="logout()" *ngIf="loggedIn">Logout</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="!loggedIn" text-center padding>
+    <h1>SPOTIFY</h1> 
+    <h2>Loogeate para ver tu playlist</h2> 
+    <br> 
+      <img src="assets/img/fondopantalla.jpg" />
+    <br>
+    <p class="royal">Spotify es una aplicación multiplataforma sueca, empleada para la reproducción de música vía streaming. Cuenta con un modelo de negocio «premium», un servicio gratuito básico y con publicidad; pero con características adicionales, con una mejor calidad de audio, a través de una suscripción de pago</p> 
+    <br> 
+    <img src="assets/img/fondo.jpg" />
+  </div>
+
+  
+  <ion-list>
+    <button ion-item *ngFor="let item of playlists" (click)="openPlaylist(item)">
+      <ion-avatar item-start *ngIf="item.images.length > 0">
+        <img [src]="item.images[0].url">
+      </ion-avatar>
+      {{ item.name }}
+      <p>Canciones: {{ item.tracks.total }}</p>
+    </button>
+  </ion-list>
+</ion-content>
